@@ -1,0 +1,77 @@
+###
+
+GET http://localhost:3000/
+
+
+###
+GET http://localhost:3000/todo/all
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiI2MTVjODc0ZjU2NzFhYzYwMWU1NTU3NWIiLCJpYXQiOjE2MzM1MzYyODcsImV4cCI6MTYzMzUzODA4N30.9rqXt9fr1o_cqMThM21BGMr2ptPdje_VYomMayCkXrk
+
+###
+GET http://localhost:3000/todo/615c71ebcde5b0bfc0464428
+
+###
+POST http://localhost:3000/todo/create
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiI2MTVjODc0ZjU2NzFhYzYwMWU1NTU3NWIiLCJpYXQiOjE2MzM1MzYxODAsImV4cCI6MTYzMzUzNjIxMH0.z13IN2ifKwIdmWfdInB-nxb_wf8P6AB37nGSgQ_rwDM
+
+{
+    "description": "this is a new todo",
+    "isDone": false
+}
+
+###
+POST http://localhost:3000/todo/update
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiI2MTVjODc0ZjU2NzFhYzYwMWU1NTU3NWIiLCJpYXQiOjE2MzM1MzYzNjAsImV4cCI6MTYzMzUzODE2MH0.rvCiukj9ZO6b_G4RNvN0Eud_CSsbYhmqLiFTNJcltlk
+
+{
+    "id": "615dc8cf412708a2ed86dd92",
+    "description": "this is an editted todo",
+    "isDone": true
+}
+
+###
+
+
+POST http://localhost:3000/todo/delete
+Content-Type: application/json
+
+{
+    "id": "615c73f249c24cbce2cd9640"
+}
+
+
+###
+POST http://localhost:3000/auth/create
+Content-Type: application/json
+
+
+{
+    "name": "Ayushman",
+    "email": "ayushmanbilasthakur@gmail.com",
+    "password": "password123"
+}
+
+###
+
+POST http://localhost:3000/auth/login
+Content-Type: application/json
+
+
+{
+    "email": "ayushmanbilasthakur@gmail.com",
+    "password": "password123"
+}
+
+###
+GET http://localhost:3000/auth/details
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiI2MTVjODc0ZjU2NzFhYzYwMWU1NTU3NWIiLCJpYXQiOjE2MzM1MzU3MzMsImV4cCI6MTYzMzUzNTc2M30.1_gTwZQCscpISCU2y3cak3gkZxE5MePRIV_vqnuNqk0
+
+###
+
+GET http://localhost:3000/auth/refresh
+
+
+###
+GET http://localhost:3000/auth/logout
